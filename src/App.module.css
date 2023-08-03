@@ -1,0 +1,133 @@
+* {box-sizing: border-box;}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    margin-bottom: 50px;
+}
+header .logoTipo {
+    max-width: 900px;
+    margin : 40px auto;
+}
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+}
+.container .leftSide {
+    flex: 1;
+    margin-right: 40px;
+}
+.container .leftSide h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #3a4b5c;
+}
+.container .leftSide p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #6a7d8e;
+}
+.container .leftSide input {
+    width: 100%;
+    padding: 10px 2px;
+    margin-bottom: 20px;
+    font-size: 14;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid rgba(150, 163, 171, 0.5);
+}
+.container .leftSide input:disabled {
+    opacity: 0.5;
+}
+.container .leftSide button { 
+    background-color: #227c9d;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 15PX;
+    border: 0;
+    border-radius: 15px;
+    padding: 15px 0;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.3s  ease;
+}
+.container .leftSide button:hover {
+    opacity: 0.8;
+
+}
+.container .leftSide button:disabled {
+    opacity: 0.5;
+}
+
+
+
+.container .rightSide{
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+
+}
+.container .rightSide .grid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.container .rightSide .rightBig {
+    flex: 1;
+    display: flex;
+}
+.rightArrow {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #227c9d;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-left: -35px;
+    margin-top: 120px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.rightArrow:hover {
+    opacity: 0.8;
+}
+.rightArrow i {
+    font-size: 30px;
+    color: #FFF;
+}
+
+@media (max-width: 935px) {
+    header {
+        padding: 0 20px;
+    }
+    .container {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+    .container .leftSide {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .container .rightSide {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+    .container .rightSide .rightArrow {
+        margin-left: 0;
+        margin-top: 0;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container .rightSide .grid {
+        grid-template-columns: 1fr;
+    }
+}
